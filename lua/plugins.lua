@@ -1,16 +1,4 @@
--- [[ Configure and install plugins ]]
---
---  To check the current status of your plugins, run
---    :Lazy
---
---  You can press `?` in this menu for help. Use `:q` to close the window
---
---  To update plugins, you can run
---    :Lazy update
---
--- NOTE: Here is where you install your plugins.
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   require 'kickstart.plugins.gitsigns',
@@ -26,6 +14,7 @@ require('lazy').setup({
   require 'custom.plugins.oil',
   require 'custom.plugins.material',
   require 'custom.plugins.lualine',
+  require 'custom.plugins.harpoon',
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the

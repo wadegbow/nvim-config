@@ -6,9 +6,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
--- open Oil.nvim
-vim.keymap.set('n', '<C-p>', '<cmd>Oil<CR>')
-
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -32,16 +29,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- [[ Basic Autocommands ]]
---  See `:help lua-guide-autocommands`
+-- grapple
+vim.keymap.set('n', '<leader>m', '<cmd>Grapple toggle<cr>', { desc = 'Grapple toggle tag' })
+vim.keymap.set('n', '<leader>M', '<cmd>Grapple toggle_tags<cr>', { desc = 'Grapple open tags window' })
+vim.keymap.set('n', '<leader>n', '<cmd>Grapple cycle_tags next<cr>', { desc = 'Grapple cycle next tag' })
+vim.keymap.set('n', '<leader>p', '<cmd>Grapple cycle_tags prev<cr>', { desc = 'Grapple cycle previous tag' })
+vim.keymap.set('n', '<leader>1', '<cmd>Grapple select index=1<cr>', { desc = 'Grapple select index 1' })
+vim.keymap.set('n', '<leader>2', '<cmd>Grapple select index=2<cr>', { desc = 'Grapple select index 2' })
+vim.keymap.set('n', '<leader>3', '<cmd>Grapple select index=3<cr>', { desc = 'Grapple select index 3' })
 
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-})
+-- open Oil.nvim
+vim.keymap.set('n', '<C-p>', '<cmd>Oil<CR>')

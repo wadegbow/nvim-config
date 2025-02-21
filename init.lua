@@ -8,6 +8,7 @@ vim.g.have_nerd_font = true
 require 'options'
 require 'filetypes'
 require 'keymaps'
+require 'autocommands'
 require 'lazy-install'
 require 'plugins'
 
