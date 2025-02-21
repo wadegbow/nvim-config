@@ -59,14 +59,3 @@ vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
-
--- Set highlight on search
-vim.opt.hlsearch = true
-
--- set .tpl to twig filetype
-vim.filetype.add {
-  extension = {
-    tpl = 'twig',
-    mbl = 'twig',
-  },
-}
