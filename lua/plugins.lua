@@ -15,6 +15,7 @@ require('lazy').setup({
   require 'custom.plugins.material',
   require 'custom.plugins.lualine',
   require 'custom.plugins.grapple',
+  require 'custom.plugins.lazygit',
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the
