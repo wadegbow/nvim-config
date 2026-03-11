@@ -39,4 +39,10 @@ vim.keymap.set('n', '<leader>2', '<cmd>Grapple select index=2<cr>', { desc = 'Gr
 vim.keymap.set('n', '<leader>3', '<cmd>Grapple select index=3<cr>', { desc = 'Grapple select index 3' })
 
 -- open Oil.nvim
-vim.keymap.set('n', '<C-p>', '<cmd>Oil<CR>')
+vim.keymap.set('n', '<C-p>', '<cmd>Oil<cr>', { desc = 'Open Oil in current directory' })
+
+-- open lazygit
+vim.keymap.set('n', '<leader>lg', '<cmd>LazyGit<cr>', { desc = 'Open LazyGit' })
+
+-- toggle zenmode
+vim.keymap.set('n', '<leader>zm', '<cmd>ZenMode<cr><bar><cmd>set linebreak<cr>', { desc = 'Toggle ZenMode' })
