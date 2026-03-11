@@ -1,12 +1,13 @@
 require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
+  require 'kickstart.plugins.guess-indent',
   require 'kickstart.plugins.gitsigns',
   require 'kickstart.plugins.which-key',
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.lsp',
   require 'kickstart.plugins.conform',
-  require 'kickstart.plugins.cmp',
+  require 'kickstart.plugins.blink',
   require 'kickstart.plugins.todo-comments',
   require 'kickstart.plugins.mini',
   require 'kickstart.plugins.treesitter',
