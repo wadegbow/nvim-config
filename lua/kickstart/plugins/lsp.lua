@@ -132,6 +132,30 @@ return {
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       -- ts_ls = {},
 
+      phpactor = {
+        init_options = {
+          ['language_server_worse_reflection.inlay_hints.enable'] = true,
+          -- ['language_server_worse_reflection.inlay_hints.params'] = false,
+        },
+      },
+      twiggy_language_server = {
+        cmd = { 'twiggy-language-server', '--stdio' },
+        root_markers = { 'composer.json' },
+        filetypes = { 'twig' },
+        settings = {
+          twiggy = {
+            framework = 'symfony',
+            symfonyConsolePath = 'bin/console',
+            diagnostics = {
+              twigCsFixer = true,
+            },
+          },
+        },
+      },
+      emmet_language_server = {
+        filetypes = { 'css', 'eruby', 'html', 'javascriptreact', 'less', 'sass', 'scss', 'pug', 'typescriptreact', 'twig' },
+      },
+      ts_ls = {},
       stylua = {}, -- Used to format Lua code
 
       -- Special Lua Config, as recommended by neovim help docs
